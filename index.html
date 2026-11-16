@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Loose Ends · what is this person trying to finish?</title>
+  <meta name="description" content="A bench for the journey policy in Pinterest's From Activity to Intent post. Switch the prompt's rules on and off and watch which notification slots fill with real goals, fragments, noise or generic buckets." />
+  <meta name="theme-color" content="#f3efe7" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#bench">Skip to the bench</a>
+
+  <header class="mast">
+    <p class="mast__mark">Loose Ends</p>
+    <p class="mast__sub">a bench for a written ranking policy</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>What is this person <em>trying to finish?</em></h1>
+      <div class="intro__cols">
+        <p class="lede">Pinterest replaced a keyword-clustering pipeline with one model that reads a person&rsquo;s activity and writes a short list of their goals, like <i>Modern Farmhouse Kitchen</i>. The part I find most interesting is a line from the post: once you collapse the pipeline, <q>the prompt becomes the ranking policy and the safety policy.</q> So each sentence in the prompt is a product decision. This page lets you switch them off one at a time and see what each one was protecting.</p>
+        <aside class="source">
+          <p class="source__label">Reading</p>
+          <p class="source__cite"><a href="https://medium.com/pinterest-engineering/from-activity-to-intent-generating-user-journeys-with-llms-9652b9417626">From Activity to Intent: Generating User Journeys with LLMs</a></p>
+          <p class="source__by">Lin Zhu, Manan Kalra, Byung Eun Jeon, Ye Liu, Xiangyi Chen, Jaewon Yang, Jinwen Xu, Tingting Zhu and Sudarshan Lamkhede. Pinterest Engineering, October 9, 2026.</p>
+        </aside>
+      </div>
+      <p class="synthetic"><b>Synthetic.</b> The three people below and every line of their activity are made up. No model runs on this page: which pins belong to which goal is written into the data by hand, so the only thing being tested is the policy. <a href="#how">How it works</a></p>
+    </section>
+
+    <section class="bench" id="bench" aria-label="Bench">
+      <div class="people" role="tablist" aria-label="Choose a person"></div>
+
+      <div class="desk">
+        <section class="log" aria-labelledby="log-h">
+          <div class="panel__head">
+            <h2 id="log-h">Activity log</h2>
+            <p class="panel__meta" id="log-meta"></p>
+          </div>
+          <p class="log__profile" id="log-profile"></p>
+          <ol class="log__lines" id="log-lines"></ol>
+          <p class="log__note" id="log-note"></p>
+        </section>
+
+        <div class="right">
+          <section class="prompt" aria-labelledby="prompt-h">
+            <div class="panel__head">
+              <h2 id="prompt-h">The prompt, read as policy</h2>
+              <p class="panel__meta"><span id="rule-count"></span> <button type="button" class="link" id="all-on">all on</button> <button type="button" class="link" id="all-off">all off</button></p>
+            </div>
+            <ol class="clauses" id="clauses"></ol>
+            <p class="clause clause--fixed"><span class="clause__no">7</span><span class="clause__body"><span class="clause__label">Empty is allowed. Invented is not.</span><span class="clause__quote">&ldquo;Empty output is allowed when the activity doesn&rsquo;t support anything but inventing unsupported journeys is not.&rdquo;</span></span><span class="clause__lock">always on</span></p>
+          </section>
+
+          <section class="lists" aria-label="Ranked journeys">
+            <div class="list" id="list-off">
+              <h3>Every rule off</h3>
+              <p class="list__sub">close to the old keyword pipeline</p>
+              <div class="list__body"></div>
+            </div>
+            <div class="list list--yours" id="list-on">
+              <h3>Your policy</h3>
+              <p class="list__sub" id="yours-sub"></p>
+              <div class="list__body"></div>
+            </div>
+          </section>
+          <p class="legend">The first four slots are the ones a notification could use. A slot counts as <b>useful</b> when it names a real goal, for the first time, in more than one word. Hover or focus a slot to mark its lines in the log.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="check" aria-labelledby="check-h">
+      <div class="check__intro">
+        <h2 id="check-h">Is the name in the log?</h2>
+        <p>The post&rsquo;s evaluator scores support as the axis that matters most: <q>A fluent, on-brand name that isn&rsquo;t in the log is a failure, even if a user might have clicked it.</q> Type a journey name for <span class="who"></span> and see which words the log actually backs up.</p>
+      </div>
+      <form class="check__form" id="check-form" autocomplete="off">
+        <label for="check-in" class="sr">Journey name</label>
+        <input id="check-in" type="text" maxlength="60" placeholder="Modern Farmhouse Kitchen" />
+        <button type="submit">Check</button>
+      </form>
+      <p class="check__chips" id="check-chips"></p>
+      <div class="check__out" id="check-out" aria-live="polite"></div>
+    </section>
+
+    <section class="lens" aria-labelledby="lens-h">
+      <h2 id="lens-h">What would show it works</h2>
+      <div class="lens__cols">
+        <div>
+          <h3>What the post reports</h3>
+          <p>Against the clustering system, the model&rsquo;s journeys lifted email click-through 1.1% and push opens 1.3% in a US and Canada test, and a multilingual rollout replicated the direction. The earlier clustering version had already beaten interest-based notifications by 88% on email clicks.</p>
+        </div>
+        <div>
+          <h3>The metric I would own</h3>
+          <p>The <b>Yes rate</b> on the &ldquo;Are you interested?&rdquo; module the post describes in journey emails, read by slot position. If the policy is right, slots one to four should earn Yes about equally; a sharp drop after slot two would suggest filler. Guardrails: No rate, unsubscribes, and the share of people who get an empty list, which should rise a little, not a lot.</p>
+        </div>
+        <div>
+          <h3>Why a prompt edit is a launch</h3>
+          <p>Every clause above moves real slots for at least one of three people. That is the post&rsquo;s point about giving prompts <q>the same review discipline as model code</q>. Offline, I would rerun the evaluator&rsquo;s support score on a fixed sample for every prompt change, the way the useful-slot count changes here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="how-h">
+      <h2 id="how-h">How it works</h2>
+      <ol>
+        <li><b>The log</b> uses the post&rsquo;s format: events grouped by date and action, pins separated by semicolons, tags by commas. Gray tags are auto-generated ones like <i>home decor</i> or <i>art</i>.</li>
+        <li><b>The reading step is done by hand.</b> Each pin carries two hand-written labels: the goal it belongs to and a narrower facet (cabinets, countertops). With &ldquo;one goal, one journey&rdquo; off, slots are built from facets instead, which is how fragmentation shows up.</li>
+        <li><b>Scoring.</b> Search and save count 5, comment 3, like 2, click 1. Recency halves weight every 90 days. The post gives the order of actions, not these numbers; they are mine. Ties go to the more recent journey.</li>
+        <li><b>Drops.</b> One-off means support on a single day. &ldquo;Mostly dislikes&rdquo; means more hides than positive actions and no search or save. Names are deduped case-insensitively, first one wins, capped at twelve.</li>
+        <li><b>Naming.</b> With the specificity rule off, a journey is named by its most frequent keyword, auto-tags included, which is how &ldquo;Recipes&rdquo; and &ldquo;Crypto&rdquo; happen.</li>
+        <li><b>Support check.</b> A plain word match against positive activity, with light plural handling. Words like <i>making</i> or <i>beginner</i> are treated as framing. It is a floor, not a judge: the post uses a separate language model for this.</li>
+      </ol>
+      <p class="how__foot">Built by <a href="https://sheinapribadi-star.github.io/">Sheina Pribadi</a>. An independent study of a public post, not affiliated with Pinterest. <a href="https://github.com/sheinapribadi-star/loose-ends">Code on GitHub</a>.</p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

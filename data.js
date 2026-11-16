@@ -1,0 +1,137 @@
+// Synthetic people. Every log line, label and date below is made up for this demo.
+// j = the goal a pin belongs to, f = a narrower facet. Both are hand-written: they stand in
+// for the reading step a language model does in production.
+// Auto-generated tags (the post calls these noisy) are listed in AUTO_TAGS.
+
+export const AUTO_TAGS = ['home decor', 'gardening', 'recipes', 'food', 'funny', 'celebrity', 'kitchen', 'art', 'fashion', 'shopping', 'hairstyles', 'finance', 'wedding', 'music'];
+
+export const PEOPLE = [
+  {
+    id: 'dana',
+    name: 'Dana',
+    blurb: 'Redoing a kitchen, starting a vegetable bed, baking on weekends.',
+    boards: ['Kitchen Reno 2026', 'Weeknight Dinners', 'Garden Plans'],
+    today: '2026-06-15',
+    note: 'The first lines adapt the example prompt printed in the post.',
+    journeys: {
+      kitchen: { name: 'Modern Farmhouse Kitchen', kind: 'real' },
+      garden: { name: 'Raised Bed Vegetable Garden', kind: 'real' },
+      sourdough: { name: 'Sourdough Bread Making', kind: 'real' },
+      castiron: { name: 'Cast Iron Recipes', kind: 'real' },
+      tiny: { name: 'Tiny House Living', kind: 'pushed' },
+      memes: { name: 'Office Memes', kind: 'noise' },
+      celeb: { name: 'Red Carpet Looks', kind: 'noise' },
+      cookies: { name: 'Holiday Cookie Swap', kind: 'ended' },
+    },
+    facets: {
+      cabinets: 'Shaker Cabinets', counters: 'Quartz Countertops', backsplash: 'Subway Tile Backsplash',
+      lighting: 'Farmhouse Pendant Lights', shelving: 'Open Shelving', island: 'Kitchen Islands',
+      beds: 'Raised Garden Beds', tomatoes: 'Growing Tomatoes',
+      starter: 'Sourdough Starter', loaves: 'Sourdough Loaves',
+      castiron: 'Cast Iron Skillet', cookies: 'Holiday Cookies', tiny: 'Tiny Houses', memes: 'Memes', celeb: 'Celebrity Style',
+    },
+    log: [
+      { d: '2026-06-14', a: 'search', items: [{ t: 'shaker cabinets', tags: [], j: 'kitchen', f: 'cabinets' }] },
+      { d: '2026-06-14', a: 'save', items: [
+        { t: 'subway tile backsplash', tags: ['subway tile', 'kitchen backsplash', 'home decor'], j: 'kitchen', f: 'backsplash' },
+        { t: 'quartz countertop', tags: ['quartz countertop', 'white kitchen', 'home decor'], j: 'kitchen', f: 'counters' }] },
+      { d: '2026-06-12', a: 'click', items: [
+        { t: 'raised garden bed', tags: ['raised garden bed', 'vegetable garden', 'gardening'], j: 'garden', f: 'beds' },
+        { t: 'tomato trellis', tags: ['tomato trellis', 'gardening'], j: 'garden', f: 'tomatoes' }] },
+      { d: '2026-06-11', a: 'dislike', items: [{ t: 'tiny house loft', tags: ['tiny house', 'home decor'], j: 'tiny', f: 'tiny' }] },
+      { d: '2026-06-10', a: 'click', items: [{ t: 'red carpet look', tags: ['celebrity style', 'celebrity'], j: 'celeb', f: 'celeb' }] },
+      { d: '2026-06-09', a: 'search', items: [{ t: 'sourdough starter discard', tags: [], j: 'sourdough', f: 'starter' }] },
+      { d: '2026-06-08', a: 'save', items: [
+        { t: 'farmhouse pendant lights', tags: ['farmhouse lighting', 'pendant lights', 'home decor'], j: 'kitchen', f: 'lighting' },
+        { t: 'brass cabinet pulls', tags: ['cabinet hardware', 'shaker cabinets', 'home decor'], j: 'kitchen', f: 'cabinets' }] },
+      { d: '2026-06-06', a: 'like', items: [{ t: 'open crumb sourdough loaf', tags: ['sourdough loaf', 'bread', 'food'], j: 'sourdough', f: 'loaves' }] },
+      { d: '2026-06-03', a: 'click', items: [{ t: 'monday meeting meme', tags: ['office humor', 'funny'], j: 'memes', f: 'memes' }] },
+      { d: '2026-06-02', a: 'dislike', items: [{ t: 'tiny house on wheels', tags: ['tiny house', 'home decor'], j: 'tiny', f: 'tiny' }] },
+      { d: '2026-06-01', a: 'save', items: [{ t: 'cedar raised bed plans', tags: ['raised garden bed', 'diy', 'gardening'], j: 'garden', f: 'beds' }] },
+      { d: '2026-05-30', a: 'save', items: [
+        { t: 'cast iron skillet cornbread', tags: ['cast iron skillet', 'cornbread', 'recipes'], j: 'castiron', f: 'castiron' },
+        { t: 'dutch oven recipes', tags: ['dutch oven', 'recipes'], j: 'castiron', f: 'castiron' }] },
+      { d: '2026-05-28', a: 'search', items: [{ t: 'quartz vs marble countertops', tags: [], j: 'kitchen', f: 'counters' }] },
+      { d: '2026-05-24', a: 'comment', items: [{ t: 'white oak open shelving', tags: ['farmhouse kitchen', 'open shelving', 'kitchen'], j: 'kitchen', f: 'shelving' }] },
+      { d: '2026-05-20', a: 'click', items: [{ t: 'tiny house kitchen', tags: ['tiny house', 'kitchen', 'home decor'], j: 'tiny', f: 'tiny' }] },
+      { d: '2026-05-16', a: 'like', items: [{ t: 'sourdough starter schedule', tags: ['sourdough starter', 'bread', 'food'], j: 'sourdough', f: 'starter' }] },
+      { d: '2026-05-10', a: 'save', items: [{ t: 'cast iron seasoning guide', tags: ['cast iron skillet', 'recipes'], j: 'castiron', f: 'castiron' }] },
+      { d: '2026-05-02', a: 'dislike', items: [{ t: 'tiny house tour', tags: ['tiny house', 'home decor'], j: 'tiny', f: 'tiny' }] },
+      { d: '2026-04-25', a: 'search', items: [{ t: 'when to plant tomatoes zone 9', tags: [], j: 'garden', f: 'tomatoes' }] },
+      { d: '2026-04-18', a: 'click', items: [{ t: 'kitchen island ideas', tags: ['kitchen island', 'home decor'], j: 'kitchen', f: 'island' }] },
+      { d: '2026-03-30', a: 'like', items: [{ t: 'cat in a box meme', tags: ['memes', 'funny'], j: 'memes', f: 'memes' }] },
+      { d: '2025-12-12', a: 'save', items: [{ t: 'cookie tin packaging', tags: ['cookie swap', 'holiday baking', 'food'], j: 'cookies', f: 'cookies' }] },
+      { d: '2025-12-05', a: 'save', items: [
+        { t: 'gingerbread cookies', tags: ['gingerbread', 'holiday baking', 'recipes'], j: 'cookies', f: 'cookies' },
+        { t: 'sugar cookie icing', tags: ['royal icing', 'holiday baking', 'recipes'], j: 'cookies', f: 'cookies' }] },
+      { d: '2025-12-02', a: 'search', items: [{ t: 'christmas cookie swap recipes', tags: [], j: 'cookies', f: 'cookies' }] },
+    ],
+    chips: ['Modern Farmhouse Kitchen', 'Sourdough Bread Making', 'Home Cooking', 'Coastal Bathroom Remodel'],
+  },
+  {
+    id: 'rosa',
+    name: 'Rosa',
+    blurb: 'Going to a summer wedding in August, teaching herself to draw penguins.',
+    boards: ['August', 'Sketchbook'],
+    today: '2026-06-15',
+    note: 'Most pins carry a classifier tag like "art" or "fashion", the kind of auto-tag the post calls noisy.',
+    journeys: {
+      wedding: { name: 'Summer Wedding Guest Outfit', kind: 'real' },
+      penguins: { name: 'Penguin Art Drawing', kind: 'real' },
+      ukulele: { name: 'Beginner Ukulele', kind: 'real' },
+      crypto: { name: 'Crypto Trading', kind: 'pushed' },
+      celebwed: { name: 'Celebrity Weddings', kind: 'noise' },
+      airfryer: { name: 'Air Fryer Snacks', kind: 'noise' },
+    },
+    facets: {
+      dress: 'Floral Midi Dresses', shoes: 'Block Heels', hair: 'Wedding Guest Updos', gift: 'Wedding Gift Ideas',
+      sketch: 'Penguin Sketches', watercolor: 'Watercolor Penguins', ukulele: 'Ukulele Chords',
+      crypto: 'Crypto Charts', celebwed: 'Celebrity Weddings', airfryer: 'Air Fryer Snacks',
+    },
+    log: [
+      { d: '2026-06-13', a: 'search', items: [{ t: 'summer wedding guest dress', tags: [], j: 'wedding', f: 'dress' }] },
+      { d: '2026-06-13', a: 'save', items: [
+        { t: 'floral midi dress', tags: ['midi dress', 'wedding guest outfit', 'fashion'], j: 'wedding', f: 'dress' },
+        { t: 'block heel sandals', tags: ['block heels', 'fashion'], j: 'wedding', f: 'shoes' }] },
+      { d: '2026-06-12', a: 'dislike', items: [{ t: 'bitcoin price chart', tags: ['crypto', 'finance'], j: 'crypto', f: 'crypto' }] },
+      { d: '2026-06-11', a: 'save', items: [{ t: 'penguin pencil sketch', tags: ['penguin drawing', 'pencil sketch', 'art'], j: 'penguins', f: 'sketch' }] },
+      { d: '2026-06-10', a: 'click', items: [{ t: 'celebrity wedding dresses', tags: ['celebrity wedding', 'wedding', 'fashion'], j: 'celebwed', f: 'celebwed' }] },
+      { d: '2026-06-09', a: 'click', items: [{ t: 'altcoin tips', tags: ['crypto', 'finance'], j: 'crypto', f: 'crypto' }] },
+      { d: '2026-06-08', a: 'save', items: [{ t: 'easy wedding guest updo', tags: ['updo', 'wedding guest hair', 'hairstyles'], j: 'wedding', f: 'hair' }] },
+      { d: '2026-06-07', a: 'like', items: [{ t: 'watercolor emperor penguin', tags: ['penguin drawing', 'watercolor', 'art'], j: 'penguins', f: 'watercolor' }] },
+      { d: '2026-06-05', a: 'dislike', items: [{ t: 'crypto wallet setup', tags: ['crypto', 'finance'], j: 'crypto', f: 'crypto' }] },
+      { d: '2026-06-04', a: 'search', items: [{ t: 'how to draw a penguin', tags: [], j: 'penguins', f: 'sketch' }] },
+      { d: '2026-06-02', a: 'save', items: [{ t: 'air fryer chickpeas', tags: ['air fryer', 'snacks', 'food'], j: 'airfryer', f: 'airfryer' }] },
+      { d: '2026-05-29', a: 'click', items: [{ t: 'wedding gift under $75', tags: ['wedding gift', 'wedding', 'shopping'], j: 'wedding', f: 'gift' }] },
+      { d: '2026-05-27', a: 'dislike', items: [{ t: 'nft art drop', tags: ['crypto', 'art'], j: 'crypto', f: 'crypto' }] },
+      { d: '2026-05-25', a: 'like', items: [{ t: 'penguin character sheet', tags: ['penguin drawing', 'character design', 'art'], j: 'penguins', f: 'sketch' }] },
+      { d: '2026-05-21', a: 'search', items: [{ t: 'easy ukulele songs', tags: [], j: 'ukulele', f: 'ukulele' }] },
+      { d: '2026-05-12', a: 'save', items: [{ t: 'ukulele chord chart', tags: ['ukulele chords', 'music'], j: 'ukulele', f: 'ukulele' }] },
+      { d: '2026-05-03', a: 'click', items: [{ t: 'blush satin dress', tags: ['satin dress', 'fashion'], j: 'wedding', f: 'dress' }] },
+      { d: '2026-04-20', a: 'dislike', items: [{ t: 'day trading setup', tags: ['crypto', 'finance'], j: 'crypto', f: 'crypto' }] },
+    ],
+    chips: ['Summer Wedding Guest Outfit', 'Penguin Art Drawing', 'Art', 'Bridal Shower Planning'],
+  },
+  {
+    id: 'ivy',
+    name: 'Ivy',
+    blurb: 'Opens the app a few times a year. Nothing adds up to a goal yet.',
+    boards: [],
+    today: '2026-06-15',
+    note: 'Four unrelated clicks across nine months. The post counts an empty list as a successful answer here.',
+    journeys: {
+      desk: { name: 'Standing Desk Setup', kind: 'noise' },
+      sunset: { name: 'Watercolor Sunsets', kind: 'noise' },
+      matcha: { name: 'Matcha Drinks', kind: 'noise' },
+      waves: { name: 'Beach Waves Hair', kind: 'noise' },
+    },
+    facets: { desk: 'Standing Desks', sunset: 'Watercolor Sunsets', matcha: 'Matcha Lattes', waves: 'Beach Waves' },
+    log: [
+      { d: '2026-05-19', a: 'click', items: [{ t: 'standing desk', tags: ['home office', 'shopping'], j: 'desk', f: 'desk' }] },
+      { d: '2026-02-08', a: 'click', items: [{ t: 'watercolor sunset', tags: ['watercolor', 'art'], j: 'sunset', f: 'sunset' }] },
+      { d: '2025-11-22', a: 'like', items: [{ t: 'iced matcha latte', tags: ['matcha', 'recipes'], j: 'matcha', f: 'matcha' }] },
+      { d: '2025-09-14', a: 'click', items: [{ t: 'beach waves tutorial', tags: ['beach waves', 'hairstyles'], j: 'waves', f: 'waves' }] },
+    ],
+    chips: ['Standing Desk Setup', 'Shopping', 'Watercolor'],
+  },
+];
